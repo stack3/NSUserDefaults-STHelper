@@ -220,22 +220,22 @@
 
 - (int32_t)st_int32ForKey:(NSString *)key defaultValue:(int32_t)defaultValue
 {
-    return [self st_longForKey:key defaultValue:defaultValue];
+    return (uint32_t)[self st_longForKey:key defaultValue:defaultValue];
 }
 
 - (int32_t)st_int32ForKey:(NSString *)key
 {
-    return [self st_longForKey:key];
+    return (int32_t)[self st_longForKey:key];
 }
 
 - (uint32_t)st_uint32ForKey:(NSString *)key defaultValue:(uint32_t)defaultValue
 {
-    return [self st_unsignedLongForKey:key defaultValue:defaultValue];
+    return (uint32_t)[self st_unsignedLongForKey:key defaultValue:defaultValue];
 }
 
 - (uint32_t)st_uint32ForKey:(NSString *)key
 {
-    return [self st_unsignedLongForKey:key];
+    return (uint32_t)[self st_unsignedLongForKey:key];
 }
 
 - (int64_t)st_int64ForKey:(NSString *)key defaultValue:(int64_t)defaultValue
